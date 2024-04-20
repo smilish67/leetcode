@@ -27,7 +27,7 @@ class Solution:
         return candies
 
     # Since it's aggregation problem.
-    # We can calculate summation at once. => we don't need to get all candies list.
+    # We can calculate a summation at once. => we don't need to update all candies list.
     def candy(self, ratings: list[int]) -> int:
         last_long_idx = 0
         last_long_num = 1
