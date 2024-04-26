@@ -1,4 +1,5 @@
 import random
+import time 
 
 def selection_sort(arr: list[int]):
     for i in range(len(arr)):
@@ -17,5 +18,9 @@ def selection_sort(arr: list[int]):
     return arr
 
 
-example_arr = list(map(lambda x: random.randrange(10), range(10)))
-print(selection_sort(example_arr))
+example_arr = list(map(lambda x: random.randrange(1000000), range(1000000)))
+start = time.time()
+selection_sort(example_arr)
+end = time.time()
+
+print(end - start)

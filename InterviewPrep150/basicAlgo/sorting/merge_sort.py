@@ -1,4 +1,5 @@
 import random
+import time
 
 def merge_sort(arr: list[int]):
     if len(arr)<=1:
@@ -33,6 +34,10 @@ def merge(left: list[int], right: list[int]):
     return arr
                 
 
-example_arr = list(map(lambda x: random.randrange(10), range(10)))
-print(merge_sort(example_arr))
+example_arr = list(map(lambda x: random.randrange(1000000), range(1000000)))
+start = time.time()
+merge_sort(example_arr)
+end = time.time()
+
+print(end - start)
     
