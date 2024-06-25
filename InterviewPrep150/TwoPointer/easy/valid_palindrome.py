@@ -30,27 +30,6 @@ class Solution:
                 break
           
         return flag
-
-    def isPalindrome2(self, s:str) -> bool:
-        i = 0
-        j = len(s) - 1
-        while i < j:
-            if s[i].isdigit() or checkValid(s[i]):
-                if s[j].isdigit() or checkValid(s[j]):
-                   if s[i] == s[j]:
-                       i += 1
-                       j -= 1 
-            else:
-                i += 1
-            
-    def checkValid(self, item) -> bool:
-        c = ord(item)
-        if 64 < c and c < 91:
-            return True
-        elif 96 < c and c < 123:
-            return True
-        else:
-            return False
             
 
 sol = Solution()
